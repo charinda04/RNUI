@@ -3,30 +3,26 @@ import {Text, View, StyleSheet} from 'react-native';
 
 import {AppIcon} from '@src/components';
 import icons from '@src/theme/icons';
-import DummyOne from './DummyOne';
-import DummyTwo from './DummyTwo';
-import AddContainer from './AddContainer';
+import {useReduxSelector} from '@src/app/store/store';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'row',
   },
 });
 
-const Main: React.FC = () => {
+const DummyOne: React.FC = () => {
+  const count = useReduxSelector(state => state.shared.count);
+
   return (
     <View style={styles.container}>
-      <Text>Main</Text>
-      {console.log('Main')}
-      <AppIcon name={icons.book} />
-      <AddContainer />
-      <DummyOne />
-      <DummyTwo />
+      {console.log('DummyOne - count')}
+      <Text>DummyOne</Text>
+      <Text>{count}</Text>
     </View>
   );
 };
 
-export default Main;
+export default DummyOne;
