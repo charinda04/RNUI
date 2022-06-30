@@ -5,3 +5,4 @@ export const HOME = 'HOME';
 export const PROFILE = 'PROFILE';
 export const CARDS = 'CARDS';
 export const MAIN = 'MAIN';
+export const BOTTOM_TAB = 'BOTTOM_TAB';
