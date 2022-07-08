@@ -15,7 +15,7 @@ const MainStackNavigator: React.FC<Props> = (): JSX.Element => {
   const MainStack = createNativeStackNavigator();
 
   return (
-    <MainStack.Navigator initialRouteName={BOTTOM_TAB} screenOptions={{ headerShown: false }}>
+    <MainStack.Navigator initialRouteName={MAIN} screenOptions={{ headerShown: false }}>
       <MainStack.Screen name={MAIN_TAB_NAVIGATOR} component={MainTabNavigator} />
       <MainStack.Screen name={MAIN} component={Main} />
       <MainStack.Screen name={BOTTOM_TAB} component={BottomTab} />
